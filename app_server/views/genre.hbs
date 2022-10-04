@@ -1,0 +1,37 @@
+<div class="container">
+         <div class="main-login main-center">
+            <form id="register-form" class="form-signin" action="" method="POST">
+               <div class="color-slova">
+                  <h2 class="card-title mt-2 text-center">Genre</h2>
+               </div>
+               <div class="title-info">
+                  <h5>Choose your favourite genre...</h5>
+               </div>
+               <div class="spacing-bottom accordion accordion-style " id="genrelist">
+                  {{#each movie_genre as |genre|}}
+                  <div class="card">
+                     <div class="card-header" id="heading1">
+                        <h2 class="mb-0">
+                           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{genre._id}}" aria-expanded="true" aria-controls="collapse{{genre._id}}">
+                           {{genre.name}}
+                           </button>
+                        </h2>
+                     </div>
+                     <div id="collapse{{genre._id}}" class="collapse" aria-labelledby="heading1" data-parent="#genrelist">
+                        <div class="card-body card-body-style">
+                           <ol>
+                              {{#each genre.movies as |movie|}}
+                              <li>
+                                {{movie.title}}
+                              </li>
+                              {{/each}}
+                           </ol>
+                        </div>
+                     </div>
+                  </div>
+               {{/each}}
+               </div>
+
+            </form>
+         </div>
+      </div>

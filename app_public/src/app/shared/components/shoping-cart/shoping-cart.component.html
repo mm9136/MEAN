@@ -1,0 +1,60 @@
+<div class="heading-style">
+    <h3>Your orders:</h3>
+</div>
+
+<div class="card-body card-body-style">
+    <div class="tabela-style">
+        <table id="table-cart" class="table align-items-center">
+
+            <thead>
+            <tr>
+                <th scope="col">Movie</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let dvd of dvds">
+              <td>
+                <p class="margin-top-1">
+                  {{dvd.name}}
+                </p>
+              </td>
+              <td>
+                <div class="btn-group btn-group-toggle inline-block margin-top-0 align-items-center" data-toggle="buttons">
+                  <button class="btn" type="button" (click) = "minus(dvd._id)">-</button>
+                  <span class="margin-top-10">{{dvd.quantity}}</span>
+                  <button class="btn" (click) = "plus(dvd._id)">+</button>
+                </div>
+              </td>
+              <td>
+                <p class="margin-top-10">
+                  {{dvd.price | currency | pricedecimal}}
+                </p>
+              </td>
+              <td>
+                <button class="btn btn-sm no-borders margin-top-5" type="button" (click)="removeFromCart(dvd._id)">
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+                  </svg>
+                </button>
+              </td>
+            </tr>
+
+            </tbody>
+            <tfoot>
+            <tr>
+                <th id="total" class="right-float" colspan="2">Total :</th>
+                <td id="total_price"></td>
+                <td>{{total | currency | pricedecimal}}</td>
+            </tr>
+            </tfoot>
+        </table>
+
+    </div>
+    <div class="mb-5">
+        <a (click)="goToPayment()"><button type="button" class="btn btn-primary float-right kosarica-continue" [attr.disabled]="empty?true:null">Continue</button></a>
+        <a routerLink="/dvds"><button type="button" class="btn btn-primary float-left kosarica-continue">Buy more DVDs</button></a>
+    </div>
+</div>
+

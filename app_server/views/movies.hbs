@@ -1,0 +1,111 @@
+<div class="container">
+   
+    <div class="main-login main-center">
+       <div class="color-slova">
+          <h2 class="card-title mt-2 text-center">Movies</h2>
+       </div>
+       <div class="title-info">
+          <h5>Choose your favorite movie...</h5>
+       </div>
+       <div class="spacing-bottom accordion accordion-style" id="filmlist">
+           {{#each movies as |movie|}}
+          <div class="card">
+             <div class="card-header" id="heading{{movie._id}}">
+                {{!--<form id="remove_movie" method="POST" action="/movies/delete">--}}
+                {{!--       <input type="hidden" id="movie_id" name="movie_id" value="{{movie._id}}"/>--}}
+                {{!--       <button type="submit" id="remove" class="btn-sm btn-danger my-1">Remove</button>--}}
+                {{!--   </form>--}}
+                <h2 class="mb-0">
+                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#_{{movie._id}}" aria-expanded="false" aria-controls="_{{movie._id}}">
+                   {{movie.title}}
+                   </button>
+                 </h2>
+             </div>
+             <div id="_{{movie._id}}" class="collapse" aria-labelledby="heading{{movie._id}}" data-parent="#filmlist">
+                <div class="card-body card-body-style">
+                   <p> {{movie.description}} <br> </p>
+                </div>
+             </div>
+          </div>
+         {{/each}}
+       </div>
+      {{#if error_msg}}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+           <strong>Error!</strong> while modifying movie.
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+        </div>
+        {{/if}}
+        {{#if msg}}
+          
+         <div class="alert alert-success alert-dismissible fade show" role="alert">
+           Successfully added movie.
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+       </div>
+       {{/if}}
+        {{#if admin}}
+        <!-- Button trigger modal -->
+             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#manageMovies">
+                 Add movie
+             </button>
+
+             <!-- Modal -->
+                  <div class="modal fade" id="manageMovies" tabindex="-1" aria-labelledby="manageMoviesLabel" aria-hidden="true">
+                       <div class="modal-dialog">
+                           <div class="modal-content">
+                               <div class="modal-header">
+                                   <h5 class="modal-title" id="manageMoviesLabel">Add movie</h5>
+                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                       <span aria-hidden="true">&times;</span>
+                                   </button>
+                               </div>
+                               <div class="modal-body">
+                                   <form id="movies-form" method="POST" action= "">
+                                      <div class="form-group">
+                                           <input type=hidden id="id" value="">
+                                           <label for="imdbInput">IMDB ID</label>
+                                           <input type="text" class="form-control" id="imdbInput" name="imdb">
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="titleInput">Title</label>
+                                           <input type="text" class="form-control" id="titleInput" name="title" placeholder="The Terminator">
+                                       </div>
+                                       <div class="form-group">
+                                           <label for="yearInput">Year</label>
+                                           <input type="number" class="form-control" id="yearInput" name="year" placeholder="1984">
+                                       </div>
+                                      
+                                       <div class="form-group">
+                                           <label for="genreInput">Genre</label>
+                                           <select class="form-control" id="genreInput" name = "genre">
+                                            {{#each movie_genre}}
+                                        	<option value="{{name}}">{{name}}</option>
+                                            {{/each}}
+                                           </select>
+                                       </div>
+                                                
+                                       <div class="form-group">
+                                           <label for="descriptionInput">Description</label>
+                                           <textarea class="form-control" id="descriptionInput" name="description" rows="3"></textarea>
+                                       </div>
+                                        <button type="submit" class="btn btn-primary my-1">Save changes</button>
+                                   </form>
+                               </div>
+                               <div class="modal-footer flex-wrap">
+                                   <button type="button" id="autocomplete" class="btn btn-info my-1">Auto-complete</button>
+                                  
+                                   <button type="button" class="btn btn-secondary my-1" data-dismiss="modal">Close</button>
+                               </div>
+                               
+                           </div>
+                       </div>
+                  </div>
+                {{/if}}
+    
+    </div>
+</div>
+<br/>
+<script type="text/javascript" src="javascripts/manageMovies.js"></script>

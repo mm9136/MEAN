@@ -1,0 +1,33 @@
+<br/>
+<div class="container db-margins">
+  <div class="row align-items-center">
+    <div class="text-right col">
+    	<form action="/db/delete" method="POST" role="form">
+    		<button type="submit" class="btn btn-danger">Delete Data</button>
+    	</form>
+    </div>
+    <div class="text-left col">
+    	<form action="/db/create" method="POST" role="form">
+    		<button type="submit" class="btn btn-success">Create Data</button>
+    	</form>
+     
+    </div>
+  </div>
+</div>
+<br/>
+ {{#if msg}}
+ <div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{msg}}
+   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+   </button>
+</div>
+{{/if}}
+ {{#if msgDelete}}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{msgDelete}}.
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+       <span aria-hidden="true">&times;</span>
+     </button>
+  </div>
+  {{/if}}

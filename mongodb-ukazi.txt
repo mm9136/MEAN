@@ -1,0 +1,66 @@
+//--- Določitev spremenljivk okolja npr. process.env.PORT
+    // Windows OS
+    set PORT=80
+
+    // Unix OS #1 pristop
+    export PORT=80
+
+    // Unix OS #2 pristop
+    PORT=80 NODE_ENV=development & node app.js
+//---
+
+// primer zagona MongoDB
+mongod
+
+// primer v MS Windows OS-ih, če nimamo nastavljene PATH poti za MongoDB
+cd C:\Program Files\MongoDB\Server\4.0\bin
+mongod
+
+// pri uporabi Windows OS določite pot do MongoDB npr.
+set PATH=C:\Program Files\MongoDB\Server\4.0\bin
+
+// primer zagona MongoDB lupine (ang. shell)
+mongo
+
+//--- operacije v MongoDB lupini (ang. shell)
+    show dbs
+    show Tables
+
+    // uporabi podatkovno bazo NamigiSP
+    use NamigiSP
+
+    // primera shranjevanja
+    db.Namigi.save({
+      "naziv": "Bodi kreativen.",
+      "datum": {"$date": "2019-11-12T00:00:00Z"}
+    })
+
+    db.Namigi.save({
+      "naziv": [68, 111, 98, 114, 111, 32, 115, 101, 32, 112, 114, 105, 112, 114, 97, 118, 105, 32, 112, 114, 101, 100, 32, 118, 115, 97, 107, 105, 109, 32, 112, 114, 101, 118, 101, 114, 106, 97, 110, 106, 101, 109, 32, 122, 110, 97, 110, 106, 97, 46],
+            "datum": {"$date": "2019-11-17T00:00:00Z"}
+    })
+
+    // pregled podatkov v tabeli Namigi
+    db.Namigi.find().pretty()
+
+    // primer brisanja vsebine tabele Namigi baze
+    db.Namigi.drop()
+//---
+
+// primer uvoza podatkov v MongoDB podatkovno bazo
+mongoimport --db NamigiSP --collection Namigi --mode upsert --upsertFields naziv --jsonArray --file app_server/models/namigi-mongodb.json
+
+// prenos vsebine podatkovne baze
+mongodump -h localhost:27017 -d NamigiSP
+
+// prenos vsebine podatkovne baze z lokalnim izvozom
+mongodump -h localhost:27017 -d NamigiSP -o ~/workspace/mongodb/dump
+
+// za prenos vsebine podatkovne baze v Windows OS je potrebno to zagnati kot administrator
+mongodump -h localhost:27017 -d NamigiSP -o "D:\projects\lpt\teaching\SP 2019-2020\laboratorijske_vaje\mongodb\dump"
+
+// primer cURL klica
+curl -X POST \
+       -d "naziv=Wadi Rum&naslov=Wadi Rum Village&lastnosti=puščava,kamele,pesek,vstopnina&lng=29.576752&lat=35.419594&dnevi1=ponedeljek - petek&odprtje1=06:00&zaprtje1=18:00&zaprto1=false&dnevi2=sobota - nedelja&odprtje2=06:00&zaprtje2=18:00&zaprto2=false" \
+       -H "Content-Type: application/x-www-form-urlencoded" \
+       http://localhost:8080/api/lokacije

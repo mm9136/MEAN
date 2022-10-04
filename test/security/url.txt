@@ -1,0 +1,10 @@
+http://localhost:3000/
+http://localhost:3000/movies
+http://localhost:3000/genres
+http://localhost:3000/managedvds
+http://localhost:3000/dvds
+http://localhost:3000/login
+http://localhost:3000/changePassword
+http://localhost:3000/register
+http://localhost:3000/shoppingcart
+

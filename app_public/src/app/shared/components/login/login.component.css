@@ -1,0 +1,8 @@
+a {
+  color: blue !important; 
+  cursor: pointer;
+}
+
+button[disabled]{
+  background-color: #ccc;
+}

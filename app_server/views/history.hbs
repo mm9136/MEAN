@@ -1,0 +1,55 @@
+<div class="spacing-bottom accordion accordion-style" id="accordionExample">
+    {{#each bills as |b|}}
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapse{{b._id}}" aria-expanded="false" aria-controls="collapse{{b._id}}">
+                    Order: #{{b.order_number}}, Date: {{dateFormat b.date format='DD-MM-YYYY'}}
+                </button>
+                <div class="price ">
+                    <p class="spacing-price">{{valuta b.total}}</p>
+                </div>
+            </h2>
+        </div>
+
+        <div id="collapse{{b._id}}" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body card-body-style">
+                <div class="tabela-style">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th class="col-md-4" scope="col">Movie</th>
+                            <th class="col-md-3" scope="col">Quantity</th>
+                            <th class="col-md-2"  scope="col">Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {{#each b.dvd as |bill|}}
+                        <tr>
+                            <td>
+                                <p class="margin-top-1">
+                                    {{bill.name}}
+                                </p>
+                            </td>
+                            <td class="text-center">
+                                <div class="btn-group btn-group-toggle inline-block margin-top-0" data-toggle="buttons">
+                                    <span class="margin-top-10">{{bill.quantity}}</span>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="margin-top-10">{{valuta bill.price}}
+                                </p>
+                            </td>
+                        </tr>
+                         {{/each}}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+   {{/each}}
+
+</div>
+<br>

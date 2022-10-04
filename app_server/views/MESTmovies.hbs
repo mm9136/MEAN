@@ -1,0 +1,54 @@
+<div class="container padding-bottom-3">
+ <div class="home-main-style  justify-content-center mx-0">
+    <div class="row justify-content-center">
+       <div class="title-info">
+          <h5>Search for your favourite movie...</h5>
+       </div>
+    </div>
+    <div class="row justify-content-center">
+       <form id="search-form" method="POST" action= "/search" class="form-inline my-2 my-lg-0">
+          <div class="form-group col-sm-8 col-lg-6">
+             <input name= "search" id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          </div>
+          <div class="form-group col-sm-4 col-lg-3">
+            <select class="form-control" name="genre" id="genre">
+        	 <option value="Any">Any</option>
+        	 {{#each movie_genre}}
+        	 <option value="{{_id}}">{{name}}</option>
+             {{/each}}
+            </select>
+          </div>
+          <div class="form-group col-sm-12 col-lg-3 mt-sm-3 mt-lg-0">
+             <button class="btn btn-primary btn-block" type="submit" size="20%">Search</button>
+          </div>
+       </form>
+    </div>
+    <br/>
+       <div class="spacing-bottom accordion accordion-style" id="filmlist">
+           {{#each searchMovies}}
+          <div class="card">
+             <div class="card-header" id="heading{{_id}}">
+                <h2 class="mb-0">
+                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#_{{_id}}" aria-expanded="false" aria-controls="_{{_id}}">
+                   {{title}}
+                   </button>
+                </h2>
+             </div>
+             <div id="_{{_id}}" class="collapse" aria-labelledby="heading{{_id}}" data-parent="#filmlist">
+                <div class="card-body card-body-style">
+                   <p> {{description}} <br> </p>
+                </div>
+             </div>
+          </div>
+         {{/each}}
+    </div>
+ </div>
+ {{#if msg}}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {{msg}} <!-- Movie not found.-->
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+{{/if}}
+</div>

@@ -1,0 +1,71 @@
+<div class="modal fade" id="manageMovies" tabindex="-1" aria-labelledby="manageMoviesLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="manageMoviesLabel">Add movie to DVD</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form class="form" id="add_movie_form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="imdbInput">IMDB ID</label>
+                        <input type="text" name="imdb" class="form-control" id="imdbInput" [(ngModel)]="movie.imdb_id">
+                    </div>
+                    <div class="form-group">
+                        <label for="titleInput">Title</label>
+                        <input type="text" name="title" class="form-control" id="titleInput" placeholder="The Terminator" [(ngModel)]="movie.title">
+                    </div>
+                    <div class="form-group">
+                        <label for="yearInput">Year</label>
+                        <input type="number" name="year" class="form-control" id="yearInput" placeholder="1984" min=1880 [(ngModel)]="movie.year">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="genreInput">Genre</label>
+                        <select class="form-control" name="genre" id="genreInput" [(ngModel)]="movie.genre">
+                            <option *ngFor="let genre of genres" value="{{genre.name}}" [attr.selected]="genre._id == 'Any' ? true : null">{{genre.name}}</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="descriptionInput">Description</label>
+                        <textarea class="form-control" name="description" id="descriptionInput" rows="3" [(ngModel)]="movie.description"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer flex-wrap">
+                    <button id="autocomplete" class="btn btn-info my-1" (click)="autocomplete()">Auto-complete</button>
+                    <button id="add" class="btn btn-primary my-1" (click)="modifyMovie()">Add</button>
+                    <button id="remove" class="btn btn-primary my-1" (click)="removeMovie()">Remove</button>
+                    <button class="btn btn-secondary my-1" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+
+            <div id="movie_danger" class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="err_msg">
+                {{err_msg}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="movie_success" class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="succ_msg">
+                {{succ_msg}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="movie_info" class="alert alert-info alert-dismissible fade show" role="alert" *ngIf="info_msg">
+                {{info_msg}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="movie_warning" class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="alrt_msg">
+                {{alrt_msg}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

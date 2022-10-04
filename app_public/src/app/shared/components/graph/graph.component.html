@@ -1,0 +1,17 @@
+<div class="color-slova">
+
+    <h2 class="card-title mt-2 text-center">Top selling DVDs</h2>
+    </div>
+    <google-chart *ngIf="!error_msg" [title]="'Number of DVDs sold'" [dynamicResize]="true" [type]="'PieChart'" [data]="data">
+    </google-chart>
+
+<br>
+<h6 *ngIf="!error_msg">The best selling DVD is {{bestMovieTitle}} with percentage {{bestMoviePercentage | grafpercentage}}</h6>
+<br>
+
+<div class="alert alert-info alert-dismissible fade show mt-5 mx-5" role="alert" *ngIf="error_msg">
+  {{error_msg}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

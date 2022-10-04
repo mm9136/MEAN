@@ -1,0 +1,129 @@
+html, body{
+    background-image: url("../images/slik.jpg");
+	height: 100%;
+}
+
+#logo{
+	width:50px;
+}
+/*** REGISTER ***/
+
+/*** REGISTER && LOGIN ***/
+
+#register-form,#add-product-form, .main-login>.btn-primary{
+	margin: 20px;
+}
+#register-form > .input-group.flex-nowrap,#add-product-form >.input-group.flex-nowrap{
+	margin-top: 10px!important;
+}
+.input-group-text{
+	width: 40px!important;
+    height: 38px!important;
+
+}
+
+.navLink {
+    color: white !important;
+}
+
+.login-button{
+	min-width: 20%;
+    float: right;
+    margin-top:10px;
+}
+
+#add-product-btn{
+	width: 20%;
+    margin: 20px;
+    float: right;
+}
+
+#login-btn-block{
+	margin-top: 10px;
+	width: 100%;
+}
+
+
+.btn-login{
+	width: 25%;
+}
+
+#resetButton>.btn-block {
+    white-space: normal;
+}
+
+/***####***/
+.color-slova{
+    color: #33568F;
+}
+#filmlist .btn, #genrelist .btn {
+    white-space: normal;
+    text-align: center;
+    width: 100%;
+}
+.alertm20 {
+    margin: 0 20px;
+}
+#piechart {
+    min-height: 300px;
+}
+/*footer*/
+.footer {
+    width: 100%;
+    
+    color: #33568F;
+    text-align: center;
+    font-size: medium;
+    white-space: normal;
+   
+}
+.title-info>h5 {
+    padding: 0 15px;
+}
+@media (min-width: 992px) {
+    #search-form {
+        width:60%;
+    }
+}
+@media (min-width: 482px) {
+  .mest-alert {
+    width: 482px;
+  }
+}
+@media (min-width: 482px) and (min-width: 576px) {
+  .mest-alert {
+    width: 482px;
+  }
+}
+
+.price {
+    padding-bottom: inherit;
+    font-size: 50%;
+    text-align: right;
+}
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    max-width: 100% !important;
+}
+
+#usernamebtn {
+    min-width: 10em;
+}
+/***op**/
+#search-form input, #search-form select {
+    width:100%;
+}
+.padding-bottom-3 {
+    padding-bottom:1%;
+}
+.home-main-style {
+    padding-top: 6em;
+    padding-bottom: 8em;
+    width: 100%;
+}
+.tabela-style td, .tabela-style th {
+    padding: 1ex;
+}
+.panel-title {display: inline;font-weight: bold;}
+.checkbox.pull-right { margin: 0; }
+.pl-ziro { padding-left: 0px; }
+#remove_movie{float:right}

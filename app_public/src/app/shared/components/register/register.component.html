@@ -1,0 +1,75 @@
+<div class="container">
+     <div class="main-login main-center">
+        <form>
+           <div class="color-slova">
+              <h2 class="card-title mt-2 text-center">Register</h2>
+           </div>
+           <div class="input-group flex-nowrap">
+             <label for="firstnameR"></label>
+              <div class="input-group-prepand">
+                 <span  class="input-group-text"><i class="fas fa-user fa" aria-hidden="true"></i></span>
+              </div>
+              <input type="text" class="form-control" name="firstnameR" id="firstnameR" [style.borderColor]="border_color_firstname" placeholder="Enter your Firstname" [ngModel]="user.firstname | searchLetters" (ngModelChange)="user.firstname=$event" (keyup)="valFirstname(user.firstname)" required/>
+           </div>
+           <div class="input-group flex-nowrap">
+             <label for="lastnameR"></label>
+              <div class="input-group-prepand">
+                 <span class="input-group-text"><i class="fas fa-user fa" aria-hidden="true"></i></span>
+              </div>
+              <input type="text" class="form-control" name="lastnameR" id="lastnameR" [style.borderColor]="border_color_lastname"  placeholder="Enter your Lastname" [ngModel]="user.lastname | searchLetters" (ngModelChange)="user.lastname=$event" (keyup)="valLastname(user.lastname)" required/>
+           </div>
+           <div class="input-group flex-nowrap">
+             <label for="emailR"></label>
+              <div class="input-group-prepand">
+                 <span class="input-group-text"><i class="fas fa-at fa" aria-hidden="true"></i></span>
+              </div>
+              <input type="email" class="form-control" name="emailR" id="emailR"  [style.borderColor]="border_color" placeholder="Enter your Email" [(ngModel)]="user.email" (keyup)="valEmail(user.email)" required/>
+           </div>
+           <div class="input-group flex-nowrap">
+             <label for="passwordR"></label>
+              <div class="input-group-prepand">
+                 <span class="input-group-text"><i class="fas fa-key fa" aria-hidden="true"></i></span>
+              </div>
+              <input type="password" class="form-control" name="passwordR" id="passwordR" [style.borderColor]="border_color_pass"  placeholder="Enter your Password" [(ngModel)]="user.password" (keyup)="valPassword(user.password)" required/>
+           </div>
+           <div class="input-group flex-nowrap">
+             <label for="confirmR"></label>
+              <div class="input-group-prepand">
+                 <span class="input-group-text"><i class="fas fa-key fa" aria-hidden="true"></i></span>
+              </div>
+              <input type="password" class="form-control" name="confirmR" id="confirmR"  [style.borderColor]="border_color_confirm" placeholder="Confirm your Password" [(ngModel)]="user.confirm" (keyup)="valConfirm(user.confirm)" required/>
+           </div>
+           <div class="form-group">
+              <button type="submit" class="btn btn-primary login-button" id="register" [attr.disabled]="(!jePovezava() || register_btn_d)?true:null" (click)="register()" disabled>Register</button>
+           </div>
+           <div class="form-group">
+              <p>Already have an account? <a (click)="redirectToLogin()">Log in</a></p>
+           </div>
+        </form>
+     </div>
+</div>
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="alrt_msg">
+  {{alrt_msg}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="err_msg">
+  {{err_msg}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="err_msg_email">
+  {{err_msg_email}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="err_msg_confirm">
+  {{err_msg_confirm}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

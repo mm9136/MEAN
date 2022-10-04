@@ -1,0 +1,41 @@
+<div class="container">
+   <div class="main-login main-center">
+      <form id="register-form" class="form-signin" action="" method="POST">
+         <div class="color-slova">
+            <h2 class="card-title mt-2 text-center">Genre</h2>
+         </div>
+         <div class="title-info">
+            <h5>Choose your favourite genre...</h5>
+         </div>
+         <div class="spacing-bottom accordion accordion-style " id="genrelist">
+            <div class="card" *ngFor="let genre of genres">
+               <div class="card-header" id="heading1">
+                  <h2 class="mb-0">
+                     <button class="btn btn-link" type="button" data-toggle="collapse" attr.data-target="{{'#collapse' + genre._id}}" aria-expanded="true" attr.aria-controls="{{'collapse' + genre._id}}">
+                     {{genre.name}}
+                     </button>
+                  </h2>
+               </div>
+               <div id="collapse{{genre._id}}" class="collapse" aria-labelledby="heading1" data-parent="#genrelist">
+                  <div class="card-body card-body-style">
+                     <ol>
+                        <li *ngFor="let movie of genre.movies">
+                          {{movie.title}}
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+            <pagination *ngIf="count > 10" [disabled]="pag_disabled" [totalItems]="count" [itemsPerPage]="10" (pageChanged)="changePage($event)" [(ngModel)]="currentPage" [rotate]="true" [maxSize]="5" name="c"></pagination>
+         </div>
+
+      </form>
+   </div>
+</div>
+
+<div class="alert alert-info alert-dismissible fade show mt-5 mx-5" role="alert" *ngIf="error_msg">
+  {{error_msg}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

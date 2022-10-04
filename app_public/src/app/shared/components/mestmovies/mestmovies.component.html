@@ -1,0 +1,51 @@
+<div class="container padding-bottom-3">
+ <div class="home-main-style  justify-content-center mx-0">
+    <div class="row justify-content-center">
+       <div class="title-info">
+          <h5>Search for your favourite movie...</h5>
+       </div>
+    </div>
+    <div class="row justify-content-center">
+       <form id="search-form" (submit)="search()" class="form-inline my-2 my-lg-0">
+          <div class="form-group col-sm-8 col-lg-6">
+            <label for="search">Search</label>
+             <input name= "search" id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [ngModel]="data.search | searchLetters" (ngModelChange)="data.search=$event">
+          </div>
+          <div class="form-group col-sm-4 col-lg-3">
+            <label for="genre">Genres</label>
+            <select class="form-control" name="genre" id="genre" [(ngModel)]="data.genre">
+               <option  *ngFor="let genre of genres"  value="{{genre._id}}" [attr.selected]="genre._id == 'Any' ? true : null">{{genre.name}}</option>
+            </select>
+          </div>
+          <div class="form-group col-sm-12 col-lg-3 mt-sm-3 mt-lg-0">
+             <button id="btn-search"class="btn btn-dark btn-block" type="submit" size="20%">Search</button>
+          </div>
+       </form>
+    </div>
+    <br/>
+       <div class="spacing-bottom accordion accordion-style" id="filmlist" *ngFor="let movie of movies">
+          <div class="card">
+             <div class="card-header" id="{{'heading' + movie._id}}">
+                <h2 class="mb-0">
+                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" attr.data-target="{{'#_' + movie._id}}" aria-expanded="false" attr.aria-controls="{{'_' + movie._id}}">
+                   {{movie.title}}
+                   </button>
+                </h2>
+             </div>
+             <div id="{{'_' + movie._id}}" class="collapse" attr.aria-labelledby="{{'heading' + movie._id}}" data-parent="#filmlist">
+                <div class="card-body card-body-style">
+                   <p> {{movie.description}} <br> </p>
+                </div>
+             </div>
+          </div>
+    </div>
+ </div>
+
+   <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="alrt_msg">
+      {{alrt_msg}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+      </button>
+   </div>
+
+</div>

@@ -1,0 +1,38 @@
+[{
+	"name": "Titanic",
+	"price": 10,
+	"quantity": 100,	
+	"movies":[]
+},{
+	"name": "Twilight",
+	"price": 15,
+	"quantity": 5,
+	"movies":[{
+		"imdb_id": "tt1099212",
+		"title": "Twilight 1",
+		"year": "2008",
+		"genre": "Fantasy",
+		"description": "It is the first film in The Twilight Saga film series"
+	},
+	{
+		"imdb_id": "tt1099213",
+		"title": "Twilight 2",
+		"year": "2010",
+		"genre": "Fantasy",
+		"description": "It is the second film in The Twilight Saga film series"
+		
+	}
+	]
+},{
+	"name": "The Invisible Guest",
+	"price": 8,
+	"quantity": 55,	
+	"movies":[]
+
+},{
+	"name": "The Imitation game",
+	"price": 18,
+	"quantity": 75,	
+	"movies":[]
+
+}]

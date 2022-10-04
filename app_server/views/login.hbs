@@ -1,0 +1,46 @@
+<div class="container">
+ <div class="main-login main-center">
+    <form id="login-form" class="form-signin" action="" method="POST">
+       <div class="color-slova">
+          <h2 class="card-title mt-2 text-center">{{title}}</h2>
+       </div>
+       <div class="input-group flex-nowrap">
+          <div class="input-group-prepand">
+             <span class="input-group-text"><i class="fas fa-at fa" aria-hidden="true"></i></span>
+          </div>
+          <input id="email" type="email" class="form-control" name="email" placeholder="Enter your Email" maxlength="30" required/>
+       </div>
+       <div class="input-group flex-nowrap">
+          <div class="input-group-prepand">
+             <span class="input-group-text"><i class="fas fa-key fa" aria-hidden="true"></i></span>
+          </div>
+          <input  id="password" type="password" class="form-control" name="password" placeholder="Enter your Password" required/>
+       </div>
+       <!--ne bomo delali forgot pass za lp2/3
+       <div class="form-group">
+          <p><a href="forgotPassword">Forgot password?</a></p>
+       </div>
+       -->
+       <div id ="login-btn-block">
+          <div class="input-group">
+             <button id="login" type="submit" class="btn btn-primary btn-block btn-lg" disabled>Log in</button>
+          </div>
+          <div class="form-group">
+             <p>Need an account? <a href="register">Register now!</a></p>
+          </div>
+       </div>
+    </form>
+ </div>
+</div>
+
+ {{# if error_msg }}
+     <div class="alert alert-danger alert-dismissible fade show" role="alert">
+       {{error_msg}}
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+    </div>
+{{/if}}
+
+      <script src= "javascripts/validationLogin.js"></script>

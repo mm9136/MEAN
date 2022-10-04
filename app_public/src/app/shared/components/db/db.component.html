@@ -1,0 +1,27 @@
+<br/>
+<div class="container db-margins">
+  <div class="row align-items-center">
+    <div class="text-right col">
+        <button type="button" (click)="deleteData()" class="btn btn-danger">Delete Data</button>
+    </div>
+    <div class="text-left col">
+        <button type="button" (click)="createData()" class="btn btn-success">Create Data</button>
+    </div>
+  </div>
+</div>
+<br/>
+<div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="delete_msg">
+  {{delete_msg}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<br/>
+<div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="create_msg">
+  {{create_msg}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<br/>
+<br/>

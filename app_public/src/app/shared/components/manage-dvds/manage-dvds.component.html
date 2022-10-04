@@ -1,0 +1,41 @@
+<div class="container my-5" id="modify_dvd">
+    <form class="form_inline mt-3" action="" method="POST" id="dvd_form">
+        <div class="form-group">
+          <select class="form-control mb-2" name="dvd" id="existing_dvd" [(ngModel)]="dvd._id" (ngModelChange)="autocompleteDvd(dvd._id)"> 
+        	<option *ngFor="let dvdi of dvds" value="{{dvdi._id}}" [attr.selected]="dvdi.quantity == 0 ? true : null">{{dvdi.name}}{{(dvdi._id == "new") ? "" : ", količina: "+dvdi.quantity}}</option>
+          </select>
+          <input id="dvd_title" name="name" class="form-control" type="text" placeholder="DVD title" aria-label="DVD-title" [(ngModel)]="dvd.name">
+          <textarea id="dvd_description" name="description" class="form-control" rows="4" placeholder="Description" [(ngModel)]="dvd.description"></textarea>
+          <input id="dvd_quantity" name="quantity" class="form-control" type="number" step="1" size="2" maxlength=2 placeholder="Quantity" aria-label="IMDB-quantity" [(ngModel)]="dvd.quantity">
+          <input id="dvd_price" name="price" class="form-control mb-1" type="number" step="0.01" placeholder="Price" aria-label="Dvd-price" [(ngModel)]="dvd.price">
+        </div>
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary mb-5" data-toggle="modal" data-target="#manageMovies">
+               Add movie to DVD
+          </button>
+          
+          <div class="d-flex justify-content-around flex-wrap"><button class="btn btn-success my-1" id="add_dvd" (click)="submit('POST')" [attr.disabled]="add_btn_d?true:null">Add</button><button class="btn btn-danger my-1" id="remove_dvd" (click)="submit('DELETE')" [attr.disabled]="rm_btn_d?true:null">Remove</button><button class="btn btn-warning my-1" id="modify_dvd_btn" (click)="submit('PUT')" [attr.disabled]="mod_btn_d?true:null">Modify</button></div>
+    </form>
+    
+    <app-add-movie [addtodvd]="true" [movies]="dvd.movies" (modifyDvdMovies)="modifyMoviesOnDvd($event)"></app-add-movie>
+  <!-- info -->
+  <div class="alert alert-danger alert-dismissible fade show mt-5" role="alert" *ngIf="err_msg">
+    {{err_msg}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="alert alert-success alert-dismissible fade show mt-5" role="alert" *ngIf="succ_msg">
+    {{succ_msg}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="alert alert-warning alert-dismissible fade show mt-5" role="alert" *ngIf="alrt_msg">
+    {{alrt_msg}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>

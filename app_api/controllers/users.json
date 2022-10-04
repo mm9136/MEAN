@@ -1,0 +1,253 @@
+[
+    { 
+      "firstname" : "admin", 
+      "lastname" : "admin", 
+      "email" : "admin@admin.com", 
+      "salt" : "6333513d7b95834fb2b0a1de18a9abd7", 
+      "password" : "cae64e23dc828b367276db406b9eedf182f85631fedda22c22a90902c463611f17fcdfebe4b9a5163176aaa794aae561ac42da969d4439e75f101396885992b0",
+      "role" : "admin"
+    },
+    {
+      "firstname": "Ana",
+      "lastname": "Ankic",
+      "email": "ana@ana.com",
+      "password": "ana",
+      "salt":"test",
+      "role": "admin"
+    },{
+      "firstname": "Marko",
+      "lastname": "Markic",
+      "email": "marko.markic@gmail.com",
+      "password": "MarkoMarkic123",
+      "salt":"test",
+      "role": "admin"
+    },{
+      "firstname": "Leanne ",
+      "lastname": "Graham",
+      "email": "Sincere@april.biz",
+      "salt": "bb298b56b1a7c2a04f0d8f67c12af85d",
+      "password": "69b69ac005a7841ab446b2d49b81fce6857fc0525d58497034ee8452a1f9eb4425d1615ead0b7618fb8c4ce13de54268117f568443c323267cd3791fb679ddcf",
+      "role": "user"
+    },{
+      "firstname": "Ervin ",
+      "lastname": "Howell",
+      "email": "Shanna@melissa.tv",
+      "salt": "01f9a523f1667bd9923b46fdb98bf5da",
+      "password": "70cc475db9dac95edcea0cb56bbc3bfef7bc64cf1e053a407576b8c633c2854574bd3d313bcd642042aabe6db2cf0a0783f9a1383874bb0311309b783909aa1a",
+      "role": "user"
+    },{
+
+      "firstname": "Clementine ",
+      "lastname": "Bauch",
+      "email": "Nathan@yesenia.net",
+      "salt": "c4a55b7705a2efbd626d282d43d6c264",
+      "password": "2e43a91a4f546581c1630a168e408cb852859fba03daafc0bdf0297494c39703105cc5779425d6cc3b48798fb61e5b69c8ce5dbd5a82e33eb7333a96cc30c6a6",
+      "role": "user"
+    },{
+
+      "bills": [],
+      "firstname": "Patricia ",
+      "lastname": "Lebsack",
+      "email": "Julianne.OConner@kory.org",
+      "salt": "efbfdb38fa009ee7cce2035bda32ae71",
+      "password": "780c9814f224864f990af078a40b087dd76ed96db6e33a3414bb93e2e34f7053f74e4b800780cd6df4880adef111748de829234cad5c7ca1d9c3dd77c4c43f40",
+  "role": "user"
+    },{
+      "firstname": "Chelsey ",
+      "lastname": "Dietrich",
+      "email": "Lucio_Hettinger@annie.ca",
+      "salt": "0a66a419293347801400b6d25858607d",
+      "password": "535a94b312ce5bef530f672ea5607803d9d391ef074396133e3735e261d4ee3c41ecf5b4123d47cabd2007d637a07368ada9670516a572d5285afb6c62d46e35",
+      "role": "user"
+    },{
+      "firstname": "Dennis ",
+      "lastname": "Schulist",
+      "email": "Karley_Dach@jasper.info",
+      "salt": "58915b25fbc128cab592a9713e647f5f",
+      "password": "0b73362ce2d2f0385687f0bab6a11cc361c0a77720f0b09373abe0f4c39d6331a4ba38c0f352efe5bcbdf06229a2db858ee26a510ed17e4e6f7cb69d949da4a6",
+      "role": "user"
+    },{
+      "firstname": "Kurtis ",
+      "lastname": "Weissnat",
+      "email": "Telly.Hoeger@billy.biz",
+      "salt": "c94caa667ccf4b10f20da2836a928730",
+      "password": "2936f63562172f4314e38c905447ec519eef1c7ebc092dc6f1378af626a3705b2bcce1551e59f123604a80706dbae899da6863fba7ddd494fc457525a9e62e74",
+      "role": "user"
+    },{
+      "firstname": "Nicholas",
+      "lastname": "Runolfsdottir ",
+      "email": "Sherwood@rosamond.me",
+      "salt": "f3bb47bec5e27a54ec1f576a743865ce",
+      "password": "39d17af2d050424e9ae25f5f48bd95edd201088ffb899f51e2d989d9dee903047f89407378b46c7ee1b9e42585a2d278f965a0a980fa2444245ae3503b6e81c1",
+      "role": "user"
+    },{
+      "firstname": "Glenna ",
+      "lastname": "Reichert",
+      "email": "Chaim_McDermott@dana.io",
+      "salt": "53f41d29768849bc22fa64615748f684",
+      "password": "8461a9bf6fb7a6a800d078c8c71a876d666a2c024318994f71ce27ac538473ce31001c41db28ee63ec30ada4bdd2417d0ea2b2a8c5685d5a9ee91bbad3c550d8",
+      "role": "user"
+    },{
+      "firstname": "Clementina",
+      "lastname": "DuBuque",
+      "email": "Rey.Padberg@karina.biz",
+      "salt": "c1f74eb19520e25f06443491ba48ae09",
+      "password": "677d7093e6484fb782c66f3feb344b7ccee36786deb0a33db41404b56d3f19b27d53bba4b98d73e26d70eb4caeb593b9ea7b2c5d2070b7e685d4ed0552b65848",
+      "role": "user"
+    },{
+      "firstname": "Moriah",
+      "lastname": "Stanton",
+      "email": "moriah@karina.biz",
+      "salt": "e55e5cf6c4728abc712a75f2e4fd6884",
+      "password": "d49c525e0e6958c89c830268dfa30c1b7a10ea5af1594ae4a2286473cb310fa44e5c7786fe450efa54fc1465b82d6a1fd6e4555df386bb91954f4e68a4017d10",
+      "role": "user"
+    },{
+      "firstname": "Kattie ",
+      "lastname": "Turnpike",
+      "email": "Kattie@karina.biz",
+      "salt": "c16b23edda8edbf0e5aff001375f9fc8",
+      "password": "354af400578bd0cfe832e429be5b34af08552d0cc705508eb22709551a7eeabb71d7eba6e4fef784c611675913804d2d5a26070ac46d13349c29d02a0bd0169c",
+      "role": "user"
+    },{
+      "firstname": "Dayna ",
+      "lastname": "Delphine",
+      "email": "dayna@dana.io",
+      "salt": "5a4bfcba2cbb7c42481216a6101accb6",
+      "password": "e96835e9a7017b81175d44a43eaccfa3a58eee2e9ab7a7e19d90b50286881c25e449473991d6ad9cfea003603c6721c73125cd5ea84f9ef17782cd3b913e8232",
+      "role": "user"
+    },{
+      "firstname": "Ellsworth ",
+      "lastname": "Summit",
+      "email": "jacynthe@summit.com",
+      "salt": "0ed4c7cdd62f7da0b5ac8f91df45c1f8",
+      "password": "dc3d0b9cb8c1300220ad044de8bdac153dea19a480cdf7cb2730e12c37363fa8cecd247b949245d4efbe85b3675bc247485efa1bb495c79c531443eb485af89d",
+      "role": "user"
+    },{
+      "firstname": "Elwyn",
+      "lastname": "Skiles",
+      "email": "skiles@elvis.io",
+      "salt": "c65e9247fd367a8512685ed2fa2b3688",
+      "password": "1451381e2d945796ff61073e9d6c148a4e9c83b903f291b9a81e974e67a086f218c0ef244b0e0d05c608aa1765e7cb34f76276a0cbe9f3b996040618a24d65e3",
+      "role": "user"
+    },{
+      "firstname": "Rex ",
+      "lastname": "Trail",
+      "email": "rex@elvis.io",
+      "salt": "58579fbcfaa6e35c1b5f7db86c6d7001",
+      "password": "25f50b3ce4d9e3001393c4abe083384c91b391c49c657e1a480b0a53c6c46a0740e49051dab2724a20d66f4c9422dcfb5df4d8cfd414ace8156b62dcf1c48429",
+      "role": "user"
+    },{
+      "firstname": "Norberto ",
+      "lastname": "Crossing",
+      "email": "crossing@ola.org",
+      "salt": "e47c5cb60282a11b73d3817da2e70a60",
+      "password": "f3cb63e92b2527e159b03a83fe0c463191c8ca15c511f133dbb57f7c3d5f4f7b57251cceed2c83c9764705e72c30d3d26d8657ae17a8a48fd57fa7ae3ad48699",
+      "role": "user"
+    },{
+      "firstname": "Leopoldo",
+      "lastname": "Corkery",
+      "email": "leo@jasper.info",
+      "salt": "c70e3f1669b9496cf967a06aa099f123",
+      "password": "e4051762d7c54d99713a7709ba6931180a536d815e3e4ee3e25d138da7bd8c52871217d949ddc64e9f85e9105e8c8d668009fb4a6e8ea712b27c64a13ee59d78",
+      "role": "user"
+    },{
+      "firstname": "Considine",
+      "lastname": "Lockman",
+      "email": "lockman@jasper.info",
+      "salt": "07f2770f6af29c8435418d8ccaf11610",
+      "password": "bec35968606eee78032b5aad8afe5b04752259f45c4b4ef6f14e6e55e5ec1f4f5e7e4327ba326d89c19d7363cfa6ce9cfdf2dd9d8b0821cf54b23d23413f9d23",
+      "role": "user"
+    },{
+      "firstname": "Kamren",
+      "lastname": "Walley",
+      "email": "kamren@gmail.com",
+      "salt": "8677329134408a54d0a9325f4b85b7a3",
+      "password": "f0503ccc5a845ebe846f1fd022655d14760a1250b118f3c9f8494ba30f00b9902359eb229d88aa30fb5890101f479cde38aa7098833bbe200ede6baf5c6cce6b",
+      "role": "user"
+    },{
+      "firstname": "Skiles ",
+      "lastname": "Walks",
+      "email": "skiles@demarco.info",
+      "salt": "564a26f20b981c950bf51ec18f20ff8f",
+      "password": "bc543bc5d5cd244aa4a016a160d22578a1250c4b8b0866413d50140209be8a27cd4a214c2da2f1e5953291eac60f656e4e54852d7f113d698300325ef9d5f0a1",
+      "role": "user"
+    },{
+      "firstname": "Karianne",
+      "lastname": "Elvis",
+      "email": "kale@kale.biz",
+      "salt": "dbcbd7fd073757c96e1e3ca793f629f9",
+      "password": "29090357468cab36fa4e8b8c84378fa9b46f5d91edf27c1fa25910256608108f5d302b01226f16ca3f5f25833e879a60f2b02ebd17e359516194043395433df3",
+      "role": "user"
+    },{
+      "firstname": "Robel",
+      "lastname": "Corkery",
+      "email": "robel@kale.biz",
+      "salt": "be219f98035219013002dae2de7cc908",
+      "password": "383201cbae29f59fba3667c2e26684e04e4d3a3d222333198df20be818d07a0836feeef610bf6953c65d2f6a71682547e02fc85d43e6454379cb9766cd5154d9",
+      "role": "user"
+    },{
+      "firstname": "Samantha",
+      "lastname": "McKenziehaven",
+      "email": "semi@semi.com",
+      "salt": "c5a36206a8a0540b05cf523c0ea388dd",
+      "password": "ea95608e574d25f7527b839c43ab79a64844f2225c97c0897c7ca8cf2e5e7e453445e46958a13376cfe1d7a5430fcf5cb7bd35419437b3953aa62645c549f3ae",
+      "role": "user"
+    },{
+      "firstname": "Douglas ",
+      "lastname": "Ramiro",
+      "email": "rami@ramiro.info",
+      "salt": "a98c9b24ed63c08b0c5a60f987894f2f",
+      "password": "1805d03ae19415e032bf5138370551249953ba324785856674df7551135cd673ba45dae28e9f60f96c001a46b16dffbc9a7ff7be6782608c90bbc25f11a70ab3",
+      "role": "user"
+    },{
+      "firstname": "Romaguera",
+      "lastname": "Jacobson",
+      "email": "jacki@gmail.com",
+      "salt": "46484a131f0416385b15ccb3a68ae30d",
+      "password": "44d192a23b292fbef964360b20eca04a9cbb6be289cb122986bda3a933e510e8c6195138fe6c41399358872bae3f564e5b038daf43ba8f5547f7a44e3941abca",
+      "role": "user"
+    },{
+      "firstname": "Antonette",
+      "lastname": "Wisokyburgh",
+      "email": "anti@anastasia.net",
+      "salt": "2e8d86de610eaafaf9ddb2ec10ea0f00",
+      "password": "b3f96f96325de04b42b55d02551e71b6163f3cf7ce5534ecd5a1769df63e7e65d5bbcff7b3e3ae633b3724929b14bfe70e229c52c8394c89a5e73e081d6e4898",
+      "role": "user"
+    },{
+      "firstname": "Victor ",
+      "lastname": "Plains",
+      "email": "vicki@anastasia.net",
+      "salt": "49f2c7b7bd07febdb599e50d39b74872",
+      "password": "80d138d490f94e9abc6877367ceaaf9a47bca996f8cf3dd02ab6a6095c254fa2b92471de70d71eb703540394b21d7a4b0945aa88a2fb297a4e16d2249f30c8b6",
+      "role": "user"
+    },{
+      "firstname": "Deckow",
+      "lastname": "Crist",
+      "email": "christ@melissa.tv",
+      "salt": "17049cf83caee6396018a9b01dfde297",
+      "password": "d13bbd4501da62dd723fdc2479b3da28b22f49e2b7a429a13265090a38d453def49f90e01004e24703330b5538bc7c10cce00cc0dbbe9c491638c0cf040c6bd4",
+      "role": "user"
+    },{
+      "firstname": "Bret",
+      "lastname": "Gwenborough",
+      "email": "bret@gmail.com",
+      "salt": "ed5e112d2d0a3226c223b03ad510ab35",
+      "password": "5ae847d5b340dd51fc896b93e41de9c754b716b08c5a72a1bddf6379f4114b81cee340a4753e79edb1e5b41c9243354ee06f980c13665552563d1a5abc500031",
+      "role": "user"
+    },{
+      "firstname": "Kulas ",
+      "lastname": "Light",
+      "email": "kulas@hildegard.org",
+      "salt": "1cdeacca56532d3631b58f01db147b58",
+      "password": "ee7f0afafc1272e759d697f43eb265b442a2f1e455aa5c5ba2a5815861a8043a9de56e9387d0e99dcb499eba56463728ca4034d71c9fbc2806ace47441fd22bb",
+      "role": "user"
+    },{
+      "firstname": "Romaguera",
+      "lastname": "Crona",
+      "email": "crona@crona.com",
+      "salt": "8dfd9dc53d61bc161609c31204b031f4",
+      "password": "c8d1a7b90991a9cf80f1f7095f187e32a69284a03a91b2b1a4388c5df5061ed6d5805100e98b0c4d55ee618a050afe27893acda200a17a26020d2fa08eafb2b0",
+      "role": "user"
+    }
+
+]
